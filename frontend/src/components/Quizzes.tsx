@@ -4,7 +4,7 @@ import QuizList from './QuizList';
 import { useNavigate } from 'react-router-dom';
 
 const Quizzes: React.FC = () => {
-  const [quizzes, setQuizzes] = useState<any[]>([]); // Adjust the type as per your API response
+  const [quizzes, setQuizzes] = useState<any[]>([]);
   const navigate = useNavigate();
 
   useEffect(() => {

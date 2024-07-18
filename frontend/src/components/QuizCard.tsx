@@ -10,10 +10,10 @@ interface QuizCardProps {
 const QuizCard: React.FC<QuizCardProps> = ({ quiz, onQuizSelect }) => {
   return (
     <div className={styles.quizCard} onClick={() => onQuizSelect(quiz._id)}>
-      <h2 className={styles.name}>{quiz.name}</h2>
-      <p className={styles.category}>Category: {quiz.category}</p>
-      <p className={styles.difficulty}>Difficulty: {quiz.difficulty}</p>
-      <p className={styles.questionsCount}>Questions: {quiz.questionsCount}</p>
+      <h2>{quiz.name}</h2>
+      <p>Category: {quiz.category}</p>
+      <p>Difficulty: {quiz.difficulty}</p>
+      <p>Questions: {quiz.questionsCount}</p>
     </div>
   );
 };
