@@ -1,11 +1,11 @@
 // src/components/Login.tsx
 
 import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import apiClient from '../api/axiosClient';
 
 const Login: React.FC = () => {
-  const history = useHistory();
+  const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -17,7 +17,7 @@ const Login: React.FC = () => {
         password,
       });
       localStorage.setItem('token', response.data.token);
-      history.push('/quizzes');
+      navigate('/quizzes');
     } catch (error) {
       console.error(error);
     }
