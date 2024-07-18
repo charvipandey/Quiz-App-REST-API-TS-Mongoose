@@ -1,0 +1,18 @@
+.quizCard {
+  background-color: #f7f7f7;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.name {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.category, .difficulty, .questionsCount {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
