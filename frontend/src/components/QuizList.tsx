@@ -1,5 +1,6 @@
 import React from 'react';
 import QuizCard from './QuizCard';
+import { Quiz } from '../types';
 
 interface QuizListProps {
   quizzes: Quiz[];

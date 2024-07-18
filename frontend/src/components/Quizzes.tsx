@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import apiClient from '../api/axiosClient';
 import QuizList from './QuizList';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const Quizzes: React.FC = () => {
-  const [quizzes, setQuizzes] = useState([]);
-  const history = useHistory();
+  const [quizzes, setQuizzes] = useState<any[]>([]); // Adjust the type as per your API response
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchQuizzes = async () => {
@@ -21,7 +21,7 @@ const Quizzes: React.FC = () => {
   }, []);
 
   const handleQuizSelect = (quizId: string) => {
-    history.push(`/quizzes/${quizId}`);
+    navigate(`/quizzes/${quizId}`);
   };
 
   return (

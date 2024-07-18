@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './QuizCard.module.css';
+import { Quiz } from '../types';
 
 interface QuizCardProps {
   quiz: Quiz;
