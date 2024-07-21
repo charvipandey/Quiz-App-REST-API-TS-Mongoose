@@ -4,6 +4,7 @@ export interface Quiz {
   category: string;
   difficulty: string;
   questionsCount: number;
+  questions: Question[];
 }
 
 export interface Question {
